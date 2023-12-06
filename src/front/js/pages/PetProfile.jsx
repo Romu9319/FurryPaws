@@ -10,7 +10,6 @@ export const PetProfile = () => {
 
     return (
         <>
-            <Navbar />
             <div className="d-flex flex-wrap flex-lg-nowrap pet-background">
                 {/* Left */ }
                 <div className="m-5 p-5 flex-grow-1 ">

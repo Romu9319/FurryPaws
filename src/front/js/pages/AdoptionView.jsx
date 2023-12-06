@@ -36,11 +36,11 @@ export const AdoptionView = () => {
                 <WaitingSpinner />
             </div> }
 
-            <ul className="d-flex flex-wrap justify-content-center">
+            <ul className="row d-flex justify-content-center">
 
                 { animals !== null && animals.map( animal => (
 
-                    <li key={ animal.id } className="m-3">
+                    <li key={ animal.id } className="col-md-3 col-lg-3 col-xl-3 m-2 px-0">
                         <PetProfileCard
                             animal={ animal }
                         />

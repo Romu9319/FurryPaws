@@ -15,9 +15,6 @@ export const ImageDisplayDropDown = ( { image } ) => {
         setUserType( localStorage.getItem( "type" ) );
     }, [ userType ] );
 
-
-
-
     return (
         <>
             { userType !== null && <div className="dropdown  text-end index-front">
@@ -25,14 +22,12 @@ export const ImageDisplayDropDown = ( { image } ) => {
                     e.target.onerror = null;
                     e.target.src = 'https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg';
                 } } id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" alt="" className="p-1" />
-                <ul className="dropdown-menu " aria-labelledby="dropdownMenuButton1">
 
+                <ul className="dropdown-menu " aria-labelledby="dropdownMenuButton1">
                     { userType !== 'user' && <li><Link to="/pro-profile" className="dropdown-item" href="#">View Profile</Link></li> }
                     <li className='index-front'><Link to="/user-profile" className="dropdown-item" href="#">View userProfile</Link></li>
                     <li><Link to="/favorite" className="dropdown-item" >Favorites</Link></li>
-
                 </ul>
-
             </div>
             }
 

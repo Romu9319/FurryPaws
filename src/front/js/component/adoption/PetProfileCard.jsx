@@ -16,30 +16,17 @@ export const PetProfileCard = ( { animal } ) => {
 
     return (
         <>
-            <div className="container m-2">
-
                 <div className="card m-3" style={ { width: "18rem" } }>
-
-                    <img src={ typeof photos[ 0 ] == 'undefined' ? "https://img.freepik.com/free-vector/cute-dog-cat-friend-cartoon_138676-2432.jpg?w=2000" : photos[ 0 ].medium } className="card-img-top" alt="..." style={ { maxHeight: "20rem" } } />
-
-                    <p className="btn">{ name }</p>
-                    <div className="card-body">
-
-                        <p className="card-text">{ description }</p>
-                        <div >
-                            <p >{ breeds.primary }</p>
-
-                        </div>
-                        <div >
-                            <p className="btn " >{ breeds.primary }</p>
-
-                        </div>
-                        <div className="mt-2 m-1">
-                            <a href={ url } target="blank" className="project-text-blue">Adopt This Animal</a>
-                        </div>
+                    <img src={ typeof photos[ 0 ] == 'undefined' ? "https://img.freepik.com/free-vector/cute-dog-cat-friend-cartoon_138676-2432.jpg?w=2000" : photos[ 0 ].medium } style={{ width: "100%", height: "18rem" }} />
+                    <div className="text-center card-header"  style={{color:"#FE6244"}}>Name: { name } - { breeds.primary }</div>
+                    <div className="text-center" style={{ maxHeight: "15rem"}}>
+                       <p className='m-2'>{ description }  </p>                       
                     </div>
+                    <div className="m-3 mt-1">
+                        <Link className="btn" href={ url }  target="blank">Adopt Me</Link>
+                    </div>                                     
                 </div>
-            </div >
+            
         </>
     );
 };

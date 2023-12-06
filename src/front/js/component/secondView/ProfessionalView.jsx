@@ -4,26 +4,20 @@ import { ListOfProfessional } from "./ListOfProfessional.jsx";
 import { ChangeOfView } from "./ChangeOfView.jsx";
 
 
-
 export const ProfessionalView = ( { typeSearch } ) => {
     const [ professionalType, setProfessinalType ] = useState( typeSearch );
-
 
     const handleProfessionalType = ( type ) => {
         setProfessinalType( type );
         localStorage.setItem( "professionalType", type );
     };
-
     useEffect( () => {
     }, [] );
 
-
     return (
         <>
-
             <ChangeOfView professionalType={ handleProfessionalType } />
             <div className="position-fixed mt-5 ms-5 pt-0 index-front main-mild-blue-bg">
-
                 <ul className="nav nav-tabs " id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
                         <button className="nav-link active" id="listTab" 

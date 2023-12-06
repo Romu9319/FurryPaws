@@ -68,9 +68,6 @@ export const Navbar = () => {
                                     <button onClick={ handleLogout } type="button" className="btn  mt-2 me-2  btn-sm">Logout</button>
                                 </div>
                             }
-
-
-
                         </div> }
                         { isLogged === null &&
                             <div className="btn-group" role="group" aria-label="Basic example">
